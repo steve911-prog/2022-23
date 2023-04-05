@@ -1,0 +1,35 @@
+ul{
+    display: flex;
+    /* background-color: #0088ff; */
+    border: #e8e8e9 2.2px solid;
+    padding: 0;
+    list-style: none;
+    /* flex-flow: row wrap;     */
+   
+}
+
+
+
+ul li{
+    /* background-color: #00eeff; */
+    background-color: #8cacea; 
+    /* width: 100px; */
+    flex:2;
+    height: 100px;
+    margin: 8px;
+    padding: 4px;
+    /* border-radius: 3%; */
+}
+
+#one{
+    flex:1 1 auto;
+}
+/* li:nth-child(1){   declaring child element
+    order: 0;
+}
+
+li:nth-child(2){   declaring child element
+    order: 0;
+} */
+
+/* 47 */

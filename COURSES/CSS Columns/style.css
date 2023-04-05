@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(60, 60, 65);
+}
+
+#text{
+    /* column-width: 200px; */
+    columns: 2 150px; /*if thereis no 200 *2 px on phone, there will be no 
+    border and only one column*/
+  
+    color: white;
+    /* column-count: 3; */
+    
+    column-gap: 50px; /*indent      vidstup  */
+    column-rule: 5px dashed green; /*border takes the color of text*/
+    /* font-size: 24px;   */   
+    
+    
+   
+    /* background-color: rgb(0, 0, 0); */
+}
+
+  /* text-align: justify; /*like in Word: the string is filled with content, */
+     /* it is not in the center. But column-fill auto will nt work with this property*/ 
+
+ /* column-fill: auto; */
+
+#text span{
+    color: green;
+}
+
+
+#text h2{
+    background-color: green;
+    padding: 15px;
+    color: #fff;
+    margin: 20px 0;
+
+    column-span: all;
+    /* it makes h2 taking the width of all columns */
+}
+
+#text p{
+    break-inside: avoid;
+    /* all p's are in different columns */
+}

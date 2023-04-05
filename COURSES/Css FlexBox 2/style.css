@@ -1,0 +1,73 @@
+ body{
+    margin: 0;
+}
+
+.container {
+    border: 6px solid #7f00ff;
+}
+
+.flexItem{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center; 
+
+}
+
+.item1{
+    background-color: #b4bf35;
+}
+
+.item2{
+    background-color: #b95f21;
+}
+
+.item3{
+    background-color: #1c4c56;
+}
+
+.item4{
+    background-color: #cfb276;
+} 
+
+.item5{
+    background-color: #6b0803;
+}
+
+.item6{
+    background-color: #1c4c56;
+}
+
+.item7{
+    background-color: #b95f21;
+}
+.item8{
+    background-color: #01243a;
+}
+
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    
+    /* flex wrap: flex elements can move to the following row if there enough space */
+    /* flex-direction:row; */
+    /* display: inline-flex; takes the width of an element  */
+    min-height: 100vh;
+    /* it is the hundred-percent height of screen */
+    flex-direction: column;
+}
+
+.flexItem{
+    /* flex: 1; */
+    width: 33.3%;
+}
+
+/* @media  screen and (max-width: 650px) {
+    .container{
+        flex-direction: column;
+    }
+} */
+
+/* 16:36 */
