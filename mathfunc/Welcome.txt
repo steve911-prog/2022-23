@@ -1,0 +1,18 @@
+Description: 
+In this Python script, you will be able to count 
+some vlues vith algebga and geometry formulas, like Pythagoras theorem. You need just to click on formula and add some needed arguments.
+To get fumulas, please type  "f":
+
+
+
+
+
+
+The Quadratic Formula: x = −b ± √b²-4ac/2a
+
+Area of a circle: π x r²
+#Multiply the length of the side of the square by 4 to find the perimeter. 
+
+The Pythagorean Theorem: a²+b²=c²
+
+

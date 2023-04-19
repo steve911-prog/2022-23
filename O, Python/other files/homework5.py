@@ -21,9 +21,6 @@ def s_quadrat(a):
     print(result,"cm")
     return result
 
-s_rectangle(1,2)
-s_triangle_geron(16,17,21)
-s_triangle_h(4,5)
-s_quadrat(3)
+
 
 p = input("do you want to go? :) ")
