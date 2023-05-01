@@ -3,6 +3,7 @@ from random import *
 
 def guess():
     num = randint(1, 1000001)
+    print(num)
     print("Hi! I came up with a number between 1 and 1000 000.", 
           "\nYou have 20 attempts. Good luck!")
     #print(num)
@@ -51,9 +52,11 @@ def guess():
             if a.lower() == "y" or "yes":
                 guess()
             elif a.lower() == "n" or "nope":
+                 print("Bye!")
+                 exit()
+            else:
                 print("Bye!")
-                exit()
-
+                # exit()
     guess_try()
 
 guess()

@@ -1,0 +1,260 @@
+var da,
+  ia,
+  la,
+  na,
+  oa,
+  sa,
+  aaa,
+  baa,
+  ua,
+  wa,
+  ya,
+  Ua,
+  caa,
+  eaa,
+  nb,
+  ob,
+  sb,
+  faa,
+  tb,
+  xb,
+  gaa,
+  zb,
+  Cb,
+  Eb,
+  Fb,
+  Gb,
+  Jb,
+  Lb,
+  iaa,
+  Pb,
+  jaa,
+  kaa,
+  laa,
+  Zb,
+  bc,
+  cc,
+  gc,
+  maa,
+  hc,
+  kc,
+  jc,
+  naa,
+  lc,
+  oaa,
+  oc,
+  nc,
+  mc,
+  pc,
+  rc,
+  paa,
+  qaa,
+  Tc,
+  taa,
+  uaa,
+  Zc,
+  bd,
+  fd,
+  dd,
+  id,
+  jd,
+  kd,
+  pd,
+  td,
+  zaa,
+  Cd,
+  Baa,
+  Daa,
+  Eaa,
+  Od,
+  Ud,
+  Gaa,
+  Iaa,
+  ae,
+  Jaa,
+  Laa,
+  Maa,
+  Naa,
+  Oaa,
+  Paa,
+  Ae,
+  Qaa,
+  Ie,
+  Saa,
+  Ne,
+  Uaa,
+  Vaa,
+  Pe,
+  df,
+  Zaa,
+  $aa,
+  aba,
+  rf,
+  tf,
+  uf,
+  bba,
+  wf,
+  xf,
+  Fd,
+  yf,
+  cba,
+  Cf,
+  Df,
+  Ef,
+  fba,
+  gba,
+  Hf,
+  If,
+  hba,
+  iba;
+_.aa = function (a, b) {
+  if (Error.captureStackTrace) Error.captureStackTrace(this, _.aa);
+  else {
+    var c = Error().stack;
+    c && (this.stack = c);
+  }
+  a && (this.message = String(a));
+  void 0 !== b && (this.cause = b);
+  this.j = !0;
+};
+
+_.ba = function (a, b) {
+  a = a.split("%s");
+  for (var c = "", d = a.length - 1, e = 0; e < d; e++)
+    c += a[e] + (e < b.length ? b[e] : "%s");
+  _.aa.call(this, c + a[d]);
+};
+
+_.ca = function (a) {
+  _.m.setTimeout(function () {
+    throw a;
+  }, 0);
+};
+da = function () {
+  var a = _.m.navigator;
+  return a && (a = a.userAgent) ? a : "";
+};
+ia = function (a) {
+  return _.ea
+    ? _.fa
+      ? _.fa.brands.some(function (b) {
+          return (b = b.brand) && _.ha(b, a);
+        })
+      : !1
+    : !1;
+};
+_.ja = function (a) {
+  return _.ha(da(), a);
+};
+_.ka = function () {
+  return _.ea ? !!_.fa && 0 < _.fa.brands.length : !1;
+};
+la = function () {
+  return _.ka() ? !1 : _.ja("Opera");
+};
+_.ma = function () {
+  return _.ka() ? !1 : _.ja("Trident") || _.ja("MSIE");
+};
+na = function () {
+  return _.ka() ? !1 : _.ja("Edge");
+};
+oa = function () {
+  return _.ka() ? ia("Microsoft Edge") : _.ja("Edg/");
+};
+_.pa = function () {
+  return _.ja("Firefox") || _.ja("FxiOS");
+};
+_.ra = function () {
+  return (
+    _.ja("Safari") &&
+    !(
+      _.qa() ||
+      (_.ka() ? 0 : _.ja("Coast")) ||
+      la() ||
+      na() ||
+      oa() ||
+      (_.ka() ? ia("Opera") : _.ja("OPR")) ||
+      _.pa() ||
+      _.ja("Silk") ||
+      _.ja("Android")
+    )
+  );
+};
+_.qa = function () {
+  return _.ka()
+    ? ia("Chromium")
+    : ((_.ja("Chrome") || _.ja("CriOS")) && !na()) || _.ja("Silk");
+};
+sa = function () {
+  return _.ja("Android") && !(_.qa() || _.pa() || la() || _.ja("Silk"));
+};
+aaa = function (a) {
+  var b = {};
+  a.forEach(function (c) {
+    b[c[0]] = c[1];
+  });
+  return function (c) {
+    return (
+      b[
+        c.find(function (d) {
+          return d in b;
+        })
+      ] || ""
+    );
+  };
+};
+baa = function (a) {
+  var b = da();
+  if ("Internet Explorer" === a) {
+    if (_.ma())
+      if ((a = /rv: *([\d\.]*)/.exec(b)) && a[1]) b = a[1];
+      else {
+        a = "";
+        var c = /MSIE +([\d\.]+)/.exec(b);
+        if (c && c[1])
+          if (((b = /Trident\/(\d.\d)/.exec(b)), "7.0" == c[1]))
+            if (b && b[1])
+              switch (b[1]) {
+                case "4.0":
+                  a = "8.0";
+                  break;
+                case "5.0":
+                  a = "9.0";
+                  break;
+                case "6.0":
+                  a = "10.0";
+                  break;
+                case "7.0":
+                  a = "11.0";
+              }
+            else a = "7.0";
+          else a = c[1];
+        b = a;
+      }
+    else b = "";
+    return b;
+  }
+  var d = RegExp("([A-Z][\\w ]+)/([^\\s]+)\\s*(?:\\((.*?)\\))?", "g");
+  c = [];
+  for (var e; (e = d.exec(b)); ) c.push([e[1], e[2], e[3] || void 0]);
+  b = aaa(c);
+  
+  switch (a) {
+    case "Opera":
+      if (la()) return b(["Version", "Opera"]);
+      if (_.ka() ? ia("Opera") : _.ja("OPR")) return b(["OPR"]);
+      break;
+    case "Microsoft Edge":
+      if (na()) return b(["Edge"]);
+      if (oa()) return b(["Edg"]);
+      break;
+    case "Chromium":
+      if (_.qa()) return b(["Chrome", "CriOS", "HeadlessChrome"]);
+  }
+  return ("Firefox" === a && _.pa()) ||
+    ("Safari" === a && _.ra()) ||
+    ("Android Browser" === a && sa()) ||
+    ("Silk" === a && _.ja("Silk"))
+    ? ((b = c[2]) && b[1]) || ""
+    : "";
+};
