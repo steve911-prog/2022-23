@@ -8,3 +8,11 @@ response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={CIT
 data = json.loads(response.text)
 
 print(data)
+
+temp= data["main"]["temp"]
+feels_like= data["main"]["feels_like"]
+pressure= data["main"]["pressure"]
+wind_speed= data["wind"]["speed"]
+clouds= data["clouds"]
+description = data["weather"][0]["description"]
+icon= data["weather"][0]["icon"]
