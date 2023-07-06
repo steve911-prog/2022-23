@@ -33,6 +33,7 @@ def user(formulas):
     eval(f"{formula_}()")
     user(formulas)
 def get_argument(argument):
+
     try:
         global arg
         arg = float(input(f"Please enter {argument}: "))
